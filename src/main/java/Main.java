@@ -10,7 +10,7 @@ public class Main {
 
         AudioTrack track1 = new AudioTrack("ABBA");
         AudioTrack track2 = new AudioTrack();
-        Video video1 = new Video();
+        Video video1 = new Video("КВН");
         Video video2 = new Video();
 
         firstMediaPlayer.addTracks(track1, video1);
@@ -20,7 +20,7 @@ public class Main {
         secondMediaPlayer.playAll();
 
         System.out.println(firstMediaPlayer);
-        System.out.println(track1);
+        System.out.println(track1 + "\n" + video1);
 
     }
 }
