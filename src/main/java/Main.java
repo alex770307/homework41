@@ -8,7 +8,7 @@ public class Main {
         MediaPlayer firstMediaPlayer = new MediaPlayer();
         MediaPlayer secondMediaPlayer = new MediaPlayer();
 
-        AudioTrack track1 = new AudioTrack();
+        AudioTrack track1 = new AudioTrack("ABBA");
         AudioTrack track2 = new AudioTrack();
         Video video1 = new Video();
         Video video2 = new Video();
@@ -18,5 +18,9 @@ public class Main {
 
         secondMediaPlayer.addTracks(video2, track2);
         secondMediaPlayer.playAll();
+
+        System.out.println(firstMediaPlayer);
+        System.out.println(track1);
+
     }
 }

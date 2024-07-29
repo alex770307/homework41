@@ -8,11 +8,13 @@ class MediaPlayerTest {
     void addTracks_addInOrder_success() {
 
         MediaPlayer mediaPlayer = new MediaPlayer();
-        AudioTrack audioTrack = new AudioTrack();
-        Video video = new Video();
+        AudioTrack audioTrack = new AudioTrack("ABBA");
+        Video video = new Video("КВН");
 
         mediaPlayer.addTracks(audioTrack,video);
 
+        assertTrue(mediaPlayer.getPlayList().contains(audioTrack));
+        assertTrue(mediaPlayer.getPlayList().contains(video));
         assertEquals(2, mediaPlayer.getPlayList().size());
         assertNotNull(mediaPlayer);
 
