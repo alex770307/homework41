@@ -5,18 +5,18 @@
 public class Main {
     public static void main(String[] args) {
 
-        MediaPlayer mediaPlayerFirst = new MediaPlayer();
-        MediaPlayer mediaPlayerSecond = new MediaPlayer();
+        MediaPlayer firstMediaPlayer = new MediaPlayer();
+        MediaPlayer secondMediaPlayer = new MediaPlayer();
 
         AudioTrack track1 = new AudioTrack();
         AudioTrack track2 = new AudioTrack();
         Video video1 = new Video();
         Video video2 = new Video();
 
-        mediaPlayerFirst.addTracks(track1, video1);
-        mediaPlayerFirst.playAll();
+        firstMediaPlayer.addTracks(track1, video1);
+        firstMediaPlayer.playAll();
 
-        mediaPlayerSecond.addTracks(video2, track2);
-        mediaPlayerSecond.playAll();
+        secondMediaPlayer.addTracks(video2, track2);
+        secondMediaPlayer.playAll();
     }
 }
