@@ -6,7 +6,7 @@ import java.util.Objects;
  * Класс медиаплеер для управления воспроизведением аудио и видео треков.
  */
 public class MediaPlayer {
-     private List<Playable> playList;
+    private List<Playable> playList;
 
     public MediaPlayer() {
         playList = new ArrayList<>();
@@ -19,8 +19,15 @@ public class MediaPlayer {
      */
     public void addTracks(Playable... tracks) {
         for (Playable track : tracks) {
-            playList.add(track);
-
+            try {
+                if (track != null) {
+                    playList.add(track);
+                } else {
+                    throw new IllegalArgumentException("Трек не может быть null");
+                }
+            } catch (IllegalArgumentException e) {
+                System.out.println(e.getMessage());
+            }
         }
     }
 
@@ -30,8 +37,13 @@ public class MediaPlayer {
      */
     public void playAll() {
         for (Playable track : playList) {
-            track.printInfo();
-            track.play();
+            try {
+                track.printInfo();
+                track.play();
+            } catch (Exception e){
+                System.out.println("Ошибка при воспроизведении трека: " + e.getMessage());
+            }
+
         }
     }
 

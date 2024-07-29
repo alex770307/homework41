@@ -11,7 +11,7 @@ class MediaPlayerTest {
         AudioTrack audioTrack = new AudioTrack("ABBA");
         Video video = new Video("КВН");
 
-        mediaPlayer.addTracks(audioTrack,video);
+        mediaPlayer.addTracks(audioTrack, video);
 
         assertTrue(mediaPlayer.getPlayList().contains(audioTrack));
         assertTrue(mediaPlayer.getPlayList().contains(video));
@@ -21,13 +21,8 @@ class MediaPlayerTest {
     }
 
     @Test
-    void playAll_playOk_success() {
-
+    void addTracks_addNullTrack_throwException_success() {
         MediaPlayer mediaPlayer = new MediaPlayer();
-        AudioTrack audioTrack = new AudioTrack();
-        Video video = new Video();
-
-        mediaPlayer.addTracks(audioTrack,video);
-        mediaPlayer.playAll();
+        assertThrows(NullPointerException.class, () -> mediaPlayer.addTracks(null));
     }
 }
