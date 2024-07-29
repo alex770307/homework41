@@ -21,6 +21,5 @@ public class Main {
 
         System.out.println(firstMediaPlayer);
         System.out.println(track1 + "\n" + video1);
-
     }
 }
