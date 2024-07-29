@@ -4,7 +4,7 @@ import java.util.Objects;
  * Класс, представляющий видеотрек.
  */
 public class Video implements Playable {
-    public String name;
+    private String name;
 
     public Video() {
     }
