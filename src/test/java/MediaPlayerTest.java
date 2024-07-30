@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -25,7 +26,22 @@ class MediaPlayerTest {
 
     @Test
     void addTracks_addNullTrack_throwException_success() {
+
         MediaPlayer mediaPlayer = new MediaPlayer();
+
         assertThrows(NullPointerException.class, () -> mediaPlayer.addTracks(null));
+    }
+
+
+    @Test
+    @Disabled("Этот тест еще не готов")
+    void playAll_playOk_success() {
+
+        MediaPlayer mediaPlayer = new MediaPlayer();
+        AudioTrack audioTrack = new AudioTrack();
+        Video video = new Video();
+
+        mediaPlayer.addTracks(audioTrack,video);
+        mediaPlayer.playAll();
     }
 }
