@@ -20,6 +20,6 @@ public class Main {
         secondMediaPlayer.playAll();
 
         System.out.println(firstMediaPlayer);
-        System.out.println(track1 + "\n" + video1);
+        System.out.printf("%s\n%s",track1,video1);
     }
 }
