@@ -16,6 +16,8 @@ class MediaPlayerTest {
         assertTrue(mediaPlayer.getPlayList().contains(audioTrack));
         assertTrue(mediaPlayer.getPlayList().contains(video));
         assertEquals(2, mediaPlayer.getPlayList().size());
+        assertEquals("ABBA",audioTrack.getName());
+        assertEquals("КВН",video.getName());
         assertNotNull(mediaPlayer);
 
     }
